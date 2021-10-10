@@ -23,9 +23,11 @@ connection = True
 while connection:
     data = conn.recv(BUFF).decode(FORMAT)
     print(str(host_name) + ': ' + data)
+    if data == 'quit':
+        break
     msg  = input()
     conn.send(msg.encode(FORMAT))
-    print(str(host_name) + ': ' + msg)
+    #print(str(host_name) + ': ' + msg)
 
     if msg == 'quit':
        connection = False
