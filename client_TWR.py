@@ -28,7 +28,7 @@ print("Received response...")
 
 client.close()
 
-print("delta_time = ", end -start, ' seconds')
+print("delta_time = ", (end -start)/2 , ' seconds')
 
 
 
